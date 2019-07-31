@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Welcome to my Linux notes
 
-You can use the [editor on GitHub](https://github.com/juparave/linux/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Apache2
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Find and delete old files
 
-### Markdown
+    # find /path/to/files/ -type f -name '*.jpg' -mtime +30 -exec rm {} \;
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Example:
 
-```markdown
-Syntax highlighted code block
+Delete old Apache2 log files
 
-# Header 1
-## Header 2
-### Header 3
+    # find /var/log/apache2/ -type f -name '*.gz' -mtime +30 -exec rm {} \;
 
-- Bulleted
-- List
+* -type f stands for files
+* -name '*.gz' only compressed log files inside directory
+* -mtime +30 stands for older than 30 days
+* -exec rm {} executes *rm* command with the filelist as parameter
+* \; closes the command above
 
-1. Numbered
-2. List
+### Extract all unique user agents from Apache log file with awk
 
-**Bold** and _Italic_ and `Code` text
+[Reference](https://snippets.aktagon.com/snippets/807-how-to-extract-all-unique-user-agents-from-an-apache-log-with-awk)
 
-[Link](url) and ![Image](src)
-```
+    $ sudo awk -F\" '($2 ~ "^GET /"){print $6}' /var/log/apache2/access.log|sort|uniq > ua.log
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/juparave/linux/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
