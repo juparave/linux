@@ -24,3 +24,15 @@ Delete old Apache2 log files
 
     $ sudo awk -F\" '($2 ~ "^GET /"){print $6}' /var/log/apache2/access.log|sort|uniq > ua.log
 
+
+## Maintenance routines
+
+### Reduce photo upload size
+
+Find jpg bigger than 300kb, probably those files can be optimized.
+
+    $ find /home/user/www/uploads -type f -name '*.jpg' -size +300k -exec ls -l {} +
+    
+Find jpg bigger than 300kb and optimize them
+
+    $ find /home/user/www/uploads -type f -name '*.jpg' -size +300k -exec jpegoptim --size=125k {} \;
