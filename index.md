@@ -25,7 +25,7 @@ Delete old Apache2 log files
     $ sudo awk -F\" '($2 ~ "^GET /"){print $6}' /var/log/apache2/access.log|sort|uniq > ua.log
 
 
-## Maintenance routines
+## Routine maintenance
 
 ### Reduce photo upload size
 
