@@ -13,6 +13,17 @@ as a TXT record
 
 Verify DKIM Record on: https://easydmarc.com/tools/dkim-lookup
 
+### encryption: mydomain.com did not encrypt this message
+
+You are missing the smtp_tls_security_level directive on `/etc/postfix/main.cf`
+
+    smtp_tls_security_level = may
+
+This will set it to opportunistic TLS, using encrypted connections if the server supports it, but allowing unencrypted connections if the server doesn't.
+
+The default value for `smtp_tls_security_level` is `none`.
+
+
 ### Helper script to configure multiple domains
 
 ```bash
