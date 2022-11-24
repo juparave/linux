@@ -1,5 +1,28 @@
 ## vim && nvim
 
+## Install latest Neovim
+
+Before proceeding, run the following command to ensure the following dependencies are installed.
+
+    $ sudo apt install software-properties-common -y
+
+Import Stable Neovim PPA
+
+    $ sudo add-apt-repository ppa:neovim-ppa/stable -y
+
+Import Unstable Neovim PPA
+
+    $ sudo add-apt-repository ppa:neovim-ppa/unstable -y
+
+Run an APT update to sync the changes.
+
+    $ sudo apt-get update
+
+Install NeoVim
+With the PPA imported, install the editor.
+
+    $ sudo apt install neovim -y
+
 ## Use Vim to search and replace
 
 Search file with pattern
