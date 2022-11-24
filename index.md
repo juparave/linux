@@ -2,6 +2,7 @@
 
 - [DKIM](dkim.md)
 - [grep, find, awk](grep-find-awk.md)
+- [MySQL](mysql.md)
 
 ## Apache2
 
