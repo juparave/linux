@@ -4,6 +4,12 @@
 - [grep, find, awk](grep-find-awk.md)
 - [MySQL](mysql.md)
 
+## SSH keys
+
+Generate ssh keys
+
+    ssh-keygen -b 2048 -t rsa
+
 ## Apache2
 
 ### Find and delete old files
