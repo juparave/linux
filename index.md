@@ -3,6 +3,7 @@
 - [DKIM](dkim.md)
 - [grep, find, awk](grep-find-awk.md)
 - [MySQL](mysql.md)
+- [vim/nvim](vim-nvim.md)
 
 ## SSH keys
 
