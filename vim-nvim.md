@@ -1,5 +1,12 @@
 ## vim && nvim
 
+## Terminal fonts
+
+Best font so far:
+
+    $ brew tap homebrew/cask-fonts
+    $ brew install --cask  font-inconsolata-nerd-font
+
 ## Install latest Neovim
 
 Before proceeding, run the following command to ensure the following dependencies are installed.
