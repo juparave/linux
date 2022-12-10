@@ -1,5 +1,11 @@
 ## vim && nvim
 
+## Windows/Panes
+
+    <C-w>r  Rotate windows
+    <C-w>t  Switch from horizontal split to vertical
+    <C-w>h  Switch from vertical split to horizontal
+
 ## Terminal fonts
 
 Best font so far:
