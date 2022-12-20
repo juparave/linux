@@ -57,3 +57,26 @@ or non interactive with
 ## Find dups
 
 Trick to find dups on CSV files, on VIM open the file and sorted with `:sort` and save it, then sorted again with `:sort u` exit vim and do a `diff` between files.
+
+## Folds
+
+    :set foldmarker={,}
+
+Use folds with `za` and `zo`
+
+## Formatters
+
+### Python
+
+For python use external tool autopep8, to run actiber buffer do:
+
+    :%!autopep8 - 2> /dev/null
+
+Still haven't found a way to do it better, tried with:
+
+    augroup Formatters
+        autocmd!
+        autocmd FileType python let &l:formatprg = 'isort - 2> /dev/null && autopep8 - 2> /dev/null'
+    augroup END
+
+ref: https://www.reddit.com/r/vim/comments/a914xh/vimprettier/
