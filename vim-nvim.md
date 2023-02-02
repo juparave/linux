@@ -1,20 +1,18 @@
 ## vim && nvim
 
-## Windows/Panes
+## Install latests
 
-    <C-w>r  Rotate windows
-    <C-w>t  Switch from horizontal split to vertical
-    <C-w>h  Switch from vertical split to horizontal
+### Vim
 
-## Terminal fonts
+On Debian/Ubuntu
 
-Best font so far:
+    # add-apt-repository ppa:jonathonf/vim
+    # apt update
+    # apt install vim
 
-    $ brew tap homebrew/cask-fonts
-    $ brew install --cask  font-inconsolata-nerd-font
+### Neovim
 
-## Install latest Neovim
-
+On Debian/Ubuntu
 Before proceeding, run the following command to ensure the following dependencies are installed.
 
     $ sudo apt install software-properties-common -y
@@ -35,6 +33,20 @@ Install NeoVim
 With the PPA imported, install the editor.
 
     $ sudo apt install neovim -y
+
+
+## Windows/Panes
+
+    <C-w>r  Rotate windows
+    <C-w>t  Switch from horizontal split to vertical
+    <C-w>h  Switch from vertical split to horizontal
+
+## Terminal fonts
+
+Best font so far:
+
+    $ brew tap homebrew/cask-fonts
+    $ brew install --cask  font-inconsolata-nerd-font
 
 ## Use Vim to search and replace
 
