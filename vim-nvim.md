@@ -50,6 +50,8 @@ Best font so far:
 
 ## Use Vim to search and replace
 
+#### Using grep
+
 Search file with pattern
 
     $ grep -le --include=*.py -rnw '.' -e "Exception,"
@@ -65,6 +67,25 @@ Apply the Vim command `:bufdo` to all of these files and perform actions such as
 or non interactive with
 
     :bufdo %s/Exception, /Exception as /g
+
+
+#### Using `:vimgrep`
+
+    :vimgrep /Service.lead/j **/*
+
+* j: Without the 'j' flag Vim jumps to the first match.  With 'j' only the
+  quickfix list is updated.  With the [!] any changes in the current buffer are
+  abandoned.
+
+All files that match the search pattern will be added to a `quickfix` list, then to make the `replace`
+
+    :copen or :cwindow to open quickfix window
+
+    :cfdo %s/Service.lead/Service.currentLead/g
+
+Then save all files
+
+    :wa
 
 ## Find dups
 
