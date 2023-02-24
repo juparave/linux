@@ -4,6 +4,7 @@
 - [grep, find, awk](grep-find-awk.md)
 - [MySQL](mysql.md)
 - [vim/nvim](vim-nvim.md)
+- [Images and video](images-video.md)
 
 ## SSH keys
 
