@@ -3,6 +3,7 @@
 - [DKIM](dkim.md)
 - [grep, find, awk](grep-find-awk.md)
 - [MySQL](mysql.md)
+- [MySQL Backups](mysql_backups.md)
 - [vim/nvim](vim-nvim.md)
 - [Images and video](images-video.md)
 
