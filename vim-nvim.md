@@ -113,3 +113,7 @@ Still haven't found a way to do it better, tried with:
     augroup END
 
 ref: https://www.reddit.com/r/vim/comments/a914xh/vimprettier/
+
+## Mason
+
+Mason will handle the installation of LSP used in NVIM
