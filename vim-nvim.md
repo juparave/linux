@@ -114,6 +114,21 @@ Still haven't found a way to do it better, tried with:
 
 ref: https://www.reddit.com/r/vim/comments/a914xh/vimprettier/
 
+<<<<<<< HEAD
 ## Mason
 
 Mason will handle the installation of LSP used in NVIM
+=======
+## LSP
+
+With nvim +v0.8.3 `gopls` started to fail ruining the whole experience. There is a bug report on `nvim-lspconfig` repo
+https://github.com/neovim/nvim-lspconfig/issues/2733
+
+Manual fix is to set the value of `mod_cache` at the top of `gopls.lua` file with the value thrown by `go env GOMODCACHE`
+
+```lua
+local util = require 'lspconfig.util'
+local mod_cache = '/home/myuser/go/pkg/mod'
+```
+
+>>>>>>> Adding tips to solve  nvim issue
