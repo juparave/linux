@@ -2,6 +2,7 @@
 
 - [DKIM](dkim.md)
 - [grep, find, awk](grep-find-awk.md)
+- [tar](tar-archive.md)
 - [MySQL](mysql.md)
 - [MySQL Backups](mysql_backups.md)
 - [vim/nvim](vim-nvim.md)
