@@ -7,6 +7,7 @@
 - [MySQL Backups](mysql_backups.md)
 - [vim/nvim](vim-nvim.md)
 - [Images and video](images-video.md)
+- [Add permanent DNS](dns.md)
 
 ## SSH keys
 
