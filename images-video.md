@@ -37,3 +37,49 @@ Use `mogrify` to reduce size
     # linux
     $ find -iname "*.jpg" -type f -size +110k -exec mogrify -strip -resize 800x -quality 75 {} \;
 
+## Remove alpha channel from pngs
+
+Useful when generating iOS icons
+
+    $ convert icon_no_alpha.png -background white -alpha remove -alpha off icon_no_alpha2.png
+
+If want to preserve PNG24bit
+
+    $ convert icon_no_alpha.png -background white -alpha remove -alpha off png24:icon_no_alpha2.png
+
+A convinience script
+
+```bash
+#! /usr/bin/env bash
+#
+# remove alpha channel from PNG images when App Store upload fails
+#
+# taken from https://stackoverflow.com/a/52962485 - @Nikita Pushkar
+#
+# make sure to have brew installed, see https://brew.sh:
+#   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#
+# make sure to have imagemagick installed, see https://imagemagick.org:
+#   brew install imagemagick
+#
+
+if command -v convert; then
+    echo "imagemagick seems to be installed"
+else
+    echo "imagemagick not installed, trying to install ..."
+    if command -v brew; then
+        echo "brew is installed, using it"
+    else
+        echo "brew not installed, trying to install ..."
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+
+    brew install imagemagick
+fi
+
+for i in `ls res/icon/ios/*.png`;
+do
+    echo "convert $i"
+    convert $i -background white -alpha remove -alpha off $i;
+done
+```
