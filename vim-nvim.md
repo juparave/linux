@@ -2,6 +2,19 @@
 
 ## Install latests
 
+### Common dependencies
+
+On Debian/Ubuntu
+
+* fzf: Fuzzy finding
+* ripgrep: line-oriented search tool that recursively searches the current directory
+* silversearcher-ag: code searching tool similar to ack, with a focus on speed.
+* fd-find: program to find entries in your filesystem
+* build-essential: meta-packages that are essential to compile software. They contain the GNU/g++ compiler collection, GNU debugger, and a few more libraries and tools that are needed for compiling a program
+* unzip: decompression tools
+
+    # apt install fzf ripgrep silversearcher-ag fd-find build-essential zip unzip
+
 ### Vim
 
 On Debian/Ubuntu
