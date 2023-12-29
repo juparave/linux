@@ -142,3 +142,7 @@ Manual fix is to set the value of `mod_cache` at the top of `gopls.lua` file wit
 local util = require 'lspconfig.util'
 local mod_cache = '/home/myuser/go/pkg/mod'
 ```
+
+## null_ls
+
+https://raw.githubusercontent.com/jose-elias-alvarez/null-ls.nvim/main/doc/BUILTINS.md
