@@ -146,3 +146,12 @@ local mod_cache = '/home/myuser/go/pkg/mod'
 ## null_ls
 
 https://raw.githubusercontent.com/jose-elias-alvarez/null-ls.nvim/main/doc/BUILTINS.md
+
+## XML Format
+
+In your XML document enter:
+
+    :set formatexpr=xmlformat#Format()
+
+Then select the document and format with `gq`
+
