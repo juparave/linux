@@ -11,6 +11,12 @@ CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON database.* TO 'username'@'host';
 ```
 
+If `Your password does not satisfy the current policy requirements` then lower the password policy value
+
+```sql
+SET GLOBAL validate_password.policy = LOW;
+```
+
 ### Open server for remote access
 
 Create a remote user
