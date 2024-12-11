@@ -7,9 +7,9 @@ Following steps from https://askubuntu.com/questions/438756/using-dkim-in-my-ser
 After creating new keys, copy the value from: `cat /etc/opendkim/keys/otherdomain.com/default.txt` and add it to the DNS
 as a TXT record
 
-|Type|Hostname|Value|
-|---|---|---|
-|TXT|default._domainkey|v=DKIM1;h=sha256;k=rsa;s=email;p=MIIBIjANB...AQIDAQAB|
+| Type | Hostname            | Value                                                 |
+| ---- | ------------------- | ----------------------------------------------------- |
+| TXT  | default.\_domainkey | v=DKIM1;h=sha256;k=rsa;s=email;p=MIIBIjANB...AQIDAQAB |
 
 Verify DKIM Record on: https://easydmarc.com/tools/dkim-lookup
 
@@ -23,13 +23,12 @@ This will set it to opportunistic TLS, using encrypted connections if the server
 
 The default value for `smtp_tls_security_level` is `none`.
 
-
 ### Helper script to configure multiple domains
 
 ```bash
 #!/bin/bash
 # List of domains
-domains=( 
+domains=(
         'example.com'
 )
 # file paths and directories
@@ -115,3 +114,7 @@ do
         fi
 done
 ```
+
+## How to Configure DKIM (OpenDKIM) with Postfix
+
+ref: https://easydmarc.com/blog/how-to-configure-dkim-opendkim-with-postfix/
