@@ -51,3 +51,7 @@ Find jpg bigger than 300kb, probably those files can be optimized.
 Find jpg bigger than 300kb and optimize them
 
     $ find /home/user/www/uploads -type f -name '*.jpg' -size +300k -exec jpegoptim --size=125k {} \;
+
+### Count lines of code with `cloc`
+
+    $ cloc . --fullpath --not-match-d="node_modules|app/ios|app/android|flskenv" --not-match-f=package-lock.json
