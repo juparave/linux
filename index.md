@@ -7,6 +7,7 @@
 - [MySQL Backups](mysql_backups.md)
 - [SQLite](sqlite.md)
 - [vim/nvim](vim-nvim.md)
+- [Copilot chat for nvim](copilotchat_guide.md)
 - [Images and video](images-video.md)
 - [Add permanent DNS](dns.md)
 
